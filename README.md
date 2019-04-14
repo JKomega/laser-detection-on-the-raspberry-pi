@@ -9,5 +9,5 @@
 
 #  -main.py
   this file runs the program which detects if the photocell's readings change dramatically; this likely means the laser beam, hitting    the photocell, has been crossed. In the code the Raspberry Pi is polling for responses from a GPIO pin connected to a photocell. If the values fall below a baseline, which is the value output by the photcell when it is hit by the laser, then a varible crossed increases.
-To poll values from the photocell faster the program uses two threads, one for each photocell.
- 
+To poll values from the photocell faster the program uses two threads, one for each photocell. Currently, I need to find ways to stop the 
+threads when there is not a need to be polling for values.
